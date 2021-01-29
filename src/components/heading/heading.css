@@ -1,0 +1,18 @@
+.storybook-heading {
+  font-weight: 700;
+}
+.storybook-heading--primary {
+  /* tbd */
+}
+.storybook-heading--secondary {
+  /* tbd */
+}
+.storybook-heading--small {
+  font-size: 20px;
+}
+.storybook-heading--medium {
+  font-size: 28px;
+}
+.storybook-heading--large {
+  font-size: 36px;
+}
