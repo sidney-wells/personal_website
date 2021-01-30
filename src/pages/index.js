@@ -1,5 +1,3 @@
-// import Head from 'next/head';
-// import styles from '../../styles/Home.module.css';
 import { Text } from '../components';
 
 const Index = () => {
@@ -7,7 +5,7 @@ const Index = () => {
     textAlign: 'center',
     fontSize: 54,
     opacity: '1',
-    transition: 'opacity 5s',
+    transition: 'opacity 5s'
   };
 
   return (

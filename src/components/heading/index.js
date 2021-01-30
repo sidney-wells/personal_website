@@ -22,11 +22,11 @@ export const Heading = ({ primary, size, label, ...props }) => {
 Heading.propTypes = {
   primary: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired
 };
 
 Heading.defaultProps = {
   primary: false,
   size: 'medium',
-  label: 'No set label',
+  label: 'No set label'
 };

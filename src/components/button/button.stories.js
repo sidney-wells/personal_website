@@ -2,35 +2,34 @@ import { Button } from '.';
 
 const story = {
   title: 'Atoms/Button',
-  component: Button,
+  component: Button
 };
 
 export default story;
 
-const Template = (args) => <Button {...args} />;
+const Template = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'Button'
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  label: 'Button'
 };
 
 export const Large = Template.bind({});
 Large.args = {
   primary: true,
   size: 'large',
-  label: 'Button',
+  label: 'Button'
 };
 
 export const Small = Template.bind({});
 Small.args = {
   primary: true,
   size: 'small',
-  label: 'Button',
+  label: 'Button'
 };
-

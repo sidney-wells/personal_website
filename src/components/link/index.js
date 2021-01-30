@@ -35,9 +35,10 @@ export const Link = ({ href, size, children }) => {
 Link.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   href: PropTypes.string,
+  children: PropTypes.node
 };
 
 Link.defaultProps = {
   size: 'medium',
-  href: '',
+  href: ''
 };

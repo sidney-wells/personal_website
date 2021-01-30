@@ -12,19 +12,19 @@ const buttons = {
     padding: '12px 38px',
     cursor: 'pointer',
     '&:hover, &:focus, &:active': {
-      outline: 'none',
+      outline: 'none'
     },
     '&:hover': {
-      bg: 'neonViolet',
+      bg: 'neonViolet'
     },
     '&:active': {
       bg: 'neonGreen',
-      color: 'black',
+      color: 'black'
     },
     '&:disabled': {
       bg: 'black',
-      opacity: '0.2',
-    },
+      opacity: '0.2'
+    }
   },
   lightSecondary: {
     color: 'black',
@@ -38,21 +38,21 @@ const buttons = {
     padding: '12px 38px',
     cursor: 'pointer',
     '&:hover, &:focus, &:active': {
-      outline: 'none',
+      outline: 'none'
     },
     '&:hover': {
-      borderColor: 'neonViolet',
+      borderColor: 'neonViolet'
     },
     '&:active': {
       borderColor: 'neonViolet',
       color: 'neonViolet',
-      bg: 'neonGreen',
+      bg: 'neonGreen'
     },
     '&:disabled': {
       borderColor: 'neonViolet',
       color: 'neonViolet',
-      opacity: '0.2',
-    },
+      opacity: '0.2'
+    }
   },
   darkPrimary: {
     color: 'black',
@@ -65,21 +65,21 @@ const buttons = {
     padding: '12px 38px',
     cursor: 'pointer',
     '&:hover, &:focus, &:active': {
-      outline: 'none',
+      outline: 'none'
     },
     '&:hover': {
       bg: 'neonViolet',
-      color: 'white',
+      color: 'white'
     },
     '&:active': {
       bg: 'neonGreen',
-      color: 'black',
+      color: 'black'
     },
     '&:disabled': {
       bg: 'neonViolet',
       color: 'white',
-      opacity: '0.2',
-    },
+      opacity: '0.2'
+    }
   },
   darkSecondary: {
     color: 'white',
@@ -93,21 +93,21 @@ const buttons = {
     padding: '12px 38px',
     cursor: 'pointer',
     '&:hover, &:focus, &:active': {
-      outline: 'none',
+      outline: 'none'
     },
     '&:hover': {
       borderColor: 'neonViolet',
-      color: 'white',
+      color: 'white'
     },
     '&:active': {
       bg: 'neonGreen',
-      color: 'black',
+      color: 'black'
     },
     '&:disabled': {
       color: 'neonViolet',
-      opacity: '0.2',
-    },
-  },
+      opacity: '0.2'
+    }
+  }
 };
 
 const colors = { background: '#ffffff' };
@@ -116,7 +116,7 @@ const fonts = {
   heading: '"Poppins", sans-serif',
   body: '"IBM Plex Sans", sans-serif',
   input: 'IBM Plex Mono',
-  button: '"IBM Plex Sans", sans-serif',
+  button: '"IBM Plex Sans", sans-serif'
 };
 
 const fontSizes = {};
@@ -125,14 +125,14 @@ fontSizes.size = {
   s: 18,
   m: 24,
   l: 36,
-  xl: 48,
+  xl: 48
 };
 
 const fontWeights = {
   regular: 400,
   medium: 500,
   semiBold: 600,
-  bold: 700,
+  bold: 700
 };
 
 const space = [5, 15, 25, 50, 80];
@@ -148,38 +148,38 @@ const text = {
       fontSize: [7, 8],
       fontWeight: 'bold',
       lineHeight: ['40px', '58px'],
-      letterSpacing: ['-0.6', '-1px'],
+      letterSpacing: ['-0.6', '-1px']
     },
     h2: {
       fontSize: [6, 7],
       fontWeight: 'regular',
       lineHeight: ['40px', '48px'],
-      letterSpacing: ['-0.5px', '-1.5px'],
+      letterSpacing: ['-0.5px', '-1.5px']
     },
     h3: {
       fontSize: 5,
       fontWeight: 'regular',
       lineHeight: '32px',
-      letterSpacing: '-1px',
+      letterSpacing: '-1px'
     },
     h4: {
       fontSize: 4,
       fontWeight: 'medium',
       lineHeight: '28px',
-      letterSpacing: '-0.75px',
+      letterSpacing: '-0.75px'
     },
     h5: {
       fontSize: 2,
       fontWeight: 'semiBold',
       lineHeight: '24px',
-      letterSpacing: '-0.5px',
+      letterSpacing: '-0.5px'
     },
     h6: {
       fontSize: 0,
       fontWeight: 'regular',
       lineHeight: '20px',
-      letterSpacing: '-0.5px',
-    },
+      letterSpacing: '-0.5px'
+    }
   },
   paragraph: {
     s: {
@@ -187,23 +187,23 @@ const text = {
       fontSize: 1,
       fontWeight: 'regular',
       lineHeight: '26px',
-      letterSpacing: 0,
+      letterSpacing: 0
     },
     m: {
       fontFamily: 'body',
       fontSize: 3,
       fontWeight: 'regular',
       lineHeight: '28px',
-      letterSpacing: 0,
+      letterSpacing: 0
     },
     l: {
       fontFamily: 'body',
       fontSize: 4,
       fontWeight: 'medium',
       lineHeight: '50px',
-      letterSpacing: 0,
-    },
-  },
+      letterSpacing: 0
+    }
+  }
 };
 
 const styles = {
@@ -211,8 +211,8 @@ const styles = {
     // fontFamily: 'body',
     // lineHeight: 'body',
     // fontWeight: 'body',
-    bg: colors.background,
-  },
+    bg: colors.background
+  }
 };
 export const globalStyles = `
 
@@ -227,7 +227,7 @@ const theme = {
   fontWeights,
   space,
   styles,
-  text,
+  text
 };
 
 export default theme;
