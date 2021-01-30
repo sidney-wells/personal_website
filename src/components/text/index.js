@@ -1,20 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './text.css';
+// import './text.css';
+import { Text as BaseText } from 'theme-ui';
 
-export const Text = ({ primary, size, label, ...props }) => {
-  const mode = primary
-    ? 'storybook-text--primary'
-    : 'storybook-text--secondary';
+const Text = ({ primary, size, label, sx, ...props }) => {
+  // const mode = primary
+  //   ? 'storybook-text--primary'
+  //   : 'storybook-text--secondary';
   return (
-    <p
-      className={['storybook-text', `storybook-text--${size}`, mode].join(' ')}
-      {...props}
+    <BaseText
+      // className={['storybook-text', `storybook-text--${size}`, mode].join(' ')}
+      // {...props}
+      sx={sx}
     >
       {label}
-    </p>
+    </BaseText>
   );
 };
+
+export default Text;
 
 Text.propTypes = {
   primary: PropTypes.bool,
