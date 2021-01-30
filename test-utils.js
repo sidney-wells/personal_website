@@ -11,7 +11,6 @@ const Providers = ({ children }) => {
 const customRender = (ui, options) =>
   render(ui, { wrapper: Providers, ...options });
 
-// re-export everything
 export * from '@testing-library/react';
 export { customRender as render };
 export { userEvent };

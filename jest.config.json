@@ -1,0 +1,14 @@
+{
+  "testEnvironment": "jsdom",
+  "verbose": false,
+  "testTimeout": 10000,
+  "testMatch": ["**/__tests__/**/*.[jt]s?(x)"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  }
+}
