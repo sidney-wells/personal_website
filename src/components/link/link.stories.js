@@ -1,4 +1,4 @@
-import { Link } from '.';
+import Link from '.';
 
 const story = {
   title: 'Atoms/Links',
@@ -12,7 +12,7 @@ const Template = args => <Link {...args} />;
 export const SmallLink = Template.bind({});
 SmallLink.args = {
   href: '/',
-  size: 'small',
+  size: 's',
   children: 'This is a small link'
 };
 SmallLink.parameters = {
@@ -22,7 +22,7 @@ SmallLink.parameters = {
 export const MediumLink = Template.bind({});
 MediumLink.args = {
   href: '/',
-  size: 'medium',
+  size: 'm',
   children: 'This is a medium link'
 };
 MediumLink.parameters = {
@@ -32,7 +32,7 @@ MediumLink.parameters = {
 export const LargeLink = Template.bind({});
 LargeLink.args = {
   href: '/',
-  size: 'large',
+  size: 'l',
   children: 'This is a large link'
 };
 LargeLink.parameters = {

@@ -1,36 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import { Button as BaseButton } from 'theme-ui';
 
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
+const Button = ({ onClick, type, ...props }) => {
+  const variant = type === 'primary' ? 'primary' : 'secondary';
+  return <BaseButton onClick={onClick} variant={variant} {...props} />;
 };
 
 Button.propTypes = {
-  primary: PropTypes.bool,
-  backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
   onClick: PropTypes.func
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
-  onClick: undefined
+  type: 'primary',
+  children: 'Primary Button',
+  onClick: () => {}
 };
+
+export default Button;

@@ -1,4 +1,4 @@
-import { Button } from '.';
+import Button from '.';
 
 const story = {
   title: 'Atoms/Button',
@@ -11,25 +11,15 @@ const Template = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button'
+  type: 'primary',
+  children: 'Primary Button'
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button'
+  type: 'secondary',
+  children: 'Secondary Button'
 };
-
-export const Large = Template.bind({});
-Large.args = {
-  primary: true,
-  size: 'large',
-  label: 'Button'
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  primary: true,
-  size: 'small',
-  label: 'Button'
+Secondary.parameters = {
+  backgrounds: { default: 'dark' }
 };

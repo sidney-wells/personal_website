@@ -1,4 +1,4 @@
-import { Text } from '.';
+import Text from '.';
 
 const story = {
   title: 'Atoms/Text',
@@ -11,24 +11,25 @@ const Template = args => <Text {...args} />;
 
 export const Small = Template.bind({});
 Small.args = {
-  primary: true,
-  size: 'small',
-  label: 'This is a small link'
+  size: 's',
+  children: 'This is a small text'
+};
+Small.parameters = {
+  backgrounds: { default: 'dark' }
 };
 export const Medium = Template.bind({});
 Medium.args = {
-  primary: true,
-  size: 'medium',
-  label: 'This is a small link'
+  size: 'm',
+  children: 'This is a medium text'
+};
+Medium.parameters = {
+  backgrounds: { default: 'dark' }
 };
 export const Large = Template.bind({});
 Large.args = {
-  primary: true,
-  size: 'large',
-  label: 'This is a small link'
+  size: 'l',
+  children: 'This is a medium text'
 };
-export const Secondary = Template.bind({});
-Secondary.args = {
-  size: 'large',
-  label: 'This is a small link'
+Large.parameters = {
+  backgrounds: { default: 'dark' }
 };

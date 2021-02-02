@@ -1,116 +1,24 @@
 const breakpoints = ['500px', '1020px', '1600'];
 
 const buttons = {
-  lightPrimary: {
+  primary: {
     color: 'white',
-    bg: 'black',
-    fontFamily: 'button',
-    fontSize: '12px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    borderRadius: '20px',
-    padding: '12px 38px',
-    cursor: 'pointer',
-    '&:hover, &:focus, &:active': {
-      outline: 'none'
-    },
-    '&:hover': {
-      bg: 'neonViolet'
-    },
-    '&:active': {
-      bg: 'neonGreen',
-      color: 'black'
-    },
-    '&:disabled': {
-      bg: 'black',
-      opacity: '0.2'
-    }
+    backgroundColor: 'black',
+    borderColor: '2px solid white'
   },
-  lightSecondary: {
+  secondary: {
     color: 'black',
-    bg: 'white',
-    fontFamily: 'button',
-    fontSize: '12px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    border: 'solid 1px black',
-    borderRadius: '20px',
-    padding: '12px 38px',
-    cursor: 'pointer',
-    '&:hover, &:focus, &:active': {
-      outline: 'none'
-    },
-    '&:hover': {
-      borderColor: 'neonViolet'
-    },
-    '&:active': {
-      borderColor: 'neonViolet',
-      color: 'neonViolet',
-      bg: 'neonGreen'
-    },
-    '&:disabled': {
-      borderColor: 'neonViolet',
-      color: 'neonViolet',
-      opacity: '0.2'
-    }
-  },
-  darkPrimary: {
-    color: 'black',
-    bg: 'white',
-    fontFamily: 'button',
-    fontSize: '12px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    borderRadius: '20px',
-    padding: '12px 38px',
-    cursor: 'pointer',
-    '&:hover, &:focus, &:active': {
-      outline: 'none'
-    },
-    '&:hover': {
-      bg: 'neonViolet',
-      color: 'white'
-    },
-    '&:active': {
-      bg: 'neonGreen',
-      color: 'black'
-    },
-    '&:disabled': {
-      bg: 'neonViolet',
-      color: 'white',
-      opacity: '0.2'
-    }
-  },
-  darkSecondary: {
-    color: 'white',
-    bg: 'transparent',
-    fontFamily: 'button',
-    fontSize: '12px',
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    border: 'solid 1px white',
-    borderRadius: '20px',
-    padding: '12px 38px',
-    cursor: 'pointer',
-    '&:hover, &:focus, &:active': {
-      outline: 'none'
-    },
-    '&:hover': {
-      borderColor: 'neonViolet',
-      color: 'white'
-    },
-    '&:active': {
-      bg: 'neonGreen',
-      color: 'black'
-    },
-    '&:disabled': {
-      color: 'neonViolet',
-      opacity: '0.2'
-    }
+    backgroundColor: 'white',
+    borderColor: '2px solid black'
   }
 };
 
-const colors = { background: '#ffffff' };
+const colors = {
+  background: '#252525',
+  purple: '#6930c3',
+  turq: '#64dfdf',
+  neon: '#80ffdb'
+};
 
 const fonts = {
   heading: '"Poppins", sans-serif',
@@ -119,20 +27,33 @@ const fonts = {
   button: '"IBM Plex Sans", sans-serif'
 };
 
-const fontSizes = {};
-fontSizes.size = {
-  xs: 16,
-  s: 18,
-  m: 24,
-  l: 36,
-  xl: 48
-};
+const fontSizes = [12, 13, 14, 16, 20, 24, 30, 36, 56];
 
 const fontWeights = {
   regular: 400,
   medium: 500,
   semiBold: 600,
   bold: 700
+};
+
+const layout = {
+  root: {
+    backgroundColor: 'violet'
+  },
+  header: {
+    backgroundColor: 'blue',
+    height: '44px'
+  },
+  main: {
+    backgroundColor: 'black'
+  },
+  container: {
+    border: '2px solid white'
+  },
+  footer: {
+    backgroundColor: 'yellow',
+    height: '44px'
+  }
 };
 
 const space = [5, 15, 25, 50, 80];
@@ -144,6 +65,7 @@ space.xl = space[5];
 
 const text = {
   heading: {
+    color: colors.purple,
     h1: {
       fontSize: [7, 8],
       fontWeight: 'bold',
@@ -183,6 +105,7 @@ const text = {
   },
   paragraph: {
     s: {
+      color: colors.neon,
       fontFamily: 'body',
       fontSize: 1,
       fontWeight: 'regular',
@@ -190,6 +113,7 @@ const text = {
       letterSpacing: 0
     },
     m: {
+      color: colors.neon,
       fontFamily: 'body',
       fontSize: 3,
       fontWeight: 'regular',
@@ -197,6 +121,7 @@ const text = {
       letterSpacing: 0
     },
     l: {
+      color: colors.neon,
       fontFamily: 'body',
       fontSize: 4,
       fontWeight: 'medium',
@@ -207,12 +132,7 @@ const text = {
 };
 
 const styles = {
-  root: {
-    // fontFamily: 'body',
-    // lineHeight: 'body',
-    // fontWeight: 'body',
-    bg: colors.background
-  }
+  root: {}
 };
 export const globalStyles = `
 
@@ -225,6 +145,7 @@ const theme = {
   fonts,
   fontSizes,
   fontWeights,
+  layout,
   space,
   styles,
   text

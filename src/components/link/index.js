@@ -2,24 +2,24 @@ import { Link as StyledLink } from 'theme-ui';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 
-export const Link = ({ href, size, children }) => {
+const Link = ({ href, size, children }, ...props) => {
   const link = {
     fontFamily: 'Nunito Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
     cursor: 'pointer',
     display: 'inline-block',
     textDecoration: 'none',
-    color: 'white',
+    color: 'turq',
     '&:hover': {
       color: 'gray',
       textDecoration: 'underline'
     }
   };
   const linkSize =
-    size === 'small'
+    size === 's'
       ? { fontSize: '12px' }
-      : size === 'medium'
+      : size === 'm'
       ? { fontSize: '16px' }
-      : size === 'large'
+      : size === 'l'
       ? { fontSize: '20px' }
       : '';
 
@@ -27,18 +27,22 @@ export const Link = ({ href, size, children }) => {
 
   return (
     <NextLink href={href} prefetch={false} passHref>
-      <StyledLink sx={styles}>{children}</StyledLink>
+      <StyledLink sx={styles} {...props}>
+        {children}
+      </StyledLink>
     </NextLink>
   );
 };
 
 Link.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['s', 'm', 'l']),
   href: PropTypes.string,
   children: PropTypes.node
 };
 
 Link.defaultProps = {
-  size: 'medium',
+  size: 'm',
   href: ''
 };
+
+export default Link;

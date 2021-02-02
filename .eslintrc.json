@@ -27,7 +27,8 @@
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/react-in-jsx-scope": "off", // Use our .prettierrc file as source
-    "react/prop-types": [2, { "ignore": ["children"] }]
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "capitalized-comments": "error"
   },
   "overrides": [
     {

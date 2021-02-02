@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'theme-ui';
 import theme from '../theme';
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -9,6 +9,6 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
     </>
   );
-}
+};
 
-export default MyApp;
+export default App;
