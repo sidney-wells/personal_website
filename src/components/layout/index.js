@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { GlobalHeader, Box } from '..';
 
 const Layout = ({ children }) => {
   return (
@@ -9,9 +10,19 @@ const Layout = ({ children }) => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        variant: 'layout.root'
+        justifyContent: 'space-between'
       }}
     >
+      <header
+        sx={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <GlobalHeader />
+      </header>
       <main
         sx={{
           width: '100%',
@@ -19,7 +30,7 @@ const Layout = ({ children }) => {
           variant: 'layout.main'
         }}
       >
-        <div
+        <Box
           sx={{
             maxWidth: 768,
             mx: 'auto',
@@ -28,7 +39,7 @@ const Layout = ({ children }) => {
           }}
         >
           {children}
-        </div>
+        </Box>
       </main>
     </div>
   );

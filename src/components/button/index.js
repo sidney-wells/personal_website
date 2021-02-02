@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { Button as BaseButton } from 'theme-ui';
 
-const Button = ({ onClick, type, ...props }) => {
+const Button = ({ type, ...props }) => {
   const variant = type === 'primary' ? 'primary' : 'secondary';
-  return <BaseButton onClick={onClick} variant={variant} {...props} />;
+  return <BaseButton variant={variant} {...props} />;
 };
 
 Button.propTypes = {
@@ -13,8 +13,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'primary',
-  children: 'Primary Button',
-  onClick: () => {}
+  onClick: undefined
 };
 
 export default Button;

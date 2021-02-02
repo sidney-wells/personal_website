@@ -2,26 +2,23 @@ import { Link as StyledLink } from 'theme-ui';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 
-const Link = ({ href, size, children }, ...props) => {
+const Link = ({ href, size, children, ...props }) => {
   const link = {
-    fontFamily: 'Nunito Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
     cursor: 'pointer',
     display: 'inline-block',
     textDecoration: 'none',
-    color: 'turq',
+    color: 'neon',
     '&:hover': {
-      color: 'gray',
+      color: 'purple',
       textDecoration: 'underline'
     }
   };
   const linkSize =
-    size === 's'
-      ? { fontSize: '12px' }
+    size === 'l'
+      ? { fontSize: '24px' }
       : size === 'm'
       ? { fontSize: '16px' }
-      : size === 'l'
-      ? { fontSize: '20px' }
-      : '';
+      : { fontSize: '13px' };
 
   const styles = { ...link, ...linkSize };
 

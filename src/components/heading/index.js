@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Heading as BaseHeading } from 'theme-ui';
 
 const Heading = ({ as, ...props }) => {
-  return <BaseHeading as={as} {...props} />;
+  return <BaseHeading variant={`heading.${as}`} {...props} />;
 };
 
 Heading.propTypes = {

@@ -1,5 +1,9 @@
+export { default as Box } from './box';
 export { default as Button } from './button';
 export { default as Diamond } from './diamond';
+export { default as Flex } from './flex';
+export { default as GlobalHeader } from './global-header';
+export { default as Grid } from './grid';
 export { default as Heading } from './heading';
 export { default as Infinity } from './infinity';
 export { default as Layout } from './layout';

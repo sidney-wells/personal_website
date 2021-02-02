@@ -14,10 +14,14 @@ const buttons = {
 };
 
 const colors = {
-  background: '#252525',
+  background: 'rgba(37, 37, 37, .5)',
   purple: '#6930c3',
   turq: '#64dfdf',
   neon: '#80ffdb'
+};
+
+const headers = {
+  backgroundColor: 'red'
 };
 
 const fonts = {
@@ -27,7 +31,7 @@ const fonts = {
   button: '"IBM Plex Sans", sans-serif'
 };
 
-const fontSizes = [12, 13, 14, 16, 20, 24, 30, 36, 56];
+const fontSizes = [12, 13, 14, 16, 20, 24, 42, 56, 72];
 
 const fontWeights = {
   regular: 400,
@@ -44,9 +48,7 @@ const layout = {
     backgroundColor: 'blue',
     height: '44px'
   },
-  main: {
-    backgroundColor: 'black'
-  },
+  main: {},
   container: {
     border: '2px solid white'
   },
@@ -65,38 +67,43 @@ space.xl = space[5];
 
 const text = {
   heading: {
-    color: colors.purple,
     h1: {
+      color: colors.purple,
       fontSize: [7, 8],
       fontWeight: 'bold',
       lineHeight: ['40px', '58px'],
       letterSpacing: ['-0.6', '-1px']
     },
     h2: {
+      color: colors.purple,
       fontSize: [6, 7],
       fontWeight: 'regular',
       lineHeight: ['40px', '48px'],
       letterSpacing: ['-0.5px', '-1.5px']
     },
     h3: {
+      color: colors.purple,
       fontSize: 5,
       fontWeight: 'regular',
       lineHeight: '32px',
       letterSpacing: '-1px'
     },
     h4: {
+      color: colors.purple,
       fontSize: 4,
       fontWeight: 'medium',
       lineHeight: '28px',
       letterSpacing: '-0.75px'
     },
     h5: {
+      color: colors.purple,
       fontSize: 2,
       fontWeight: 'semiBold',
       lineHeight: '24px',
       letterSpacing: '-0.5px'
     },
     h6: {
+      color: colors.purple,
       fontSize: 0,
       fontWeight: 'regular',
       lineHeight: '20px',
@@ -105,7 +112,7 @@ const text = {
   },
   paragraph: {
     s: {
-      color: colors.neon,
+      color: colors.turq,
       fontFamily: 'body',
       fontSize: 1,
       fontWeight: 'regular',
@@ -113,7 +120,7 @@ const text = {
       letterSpacing: 0
     },
     m: {
-      color: colors.neon,
+      color: colors.turq,
       fontFamily: 'body',
       fontSize: 3,
       fontWeight: 'regular',
@@ -121,7 +128,7 @@ const text = {
       letterSpacing: 0
     },
     l: {
-      color: colors.neon,
+      color: colors.turq,
       fontFamily: 'body',
       fontSize: 4,
       fontWeight: 'medium',
@@ -131,23 +138,20 @@ const text = {
   }
 };
 
-const styles = {
-  root: {}
-};
 export const globalStyles = `
-
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 `;
 
 const theme = {
   breakpoints,
   buttons,
   colors,
+  headers,
   fonts,
   fontSizes,
   fontWeights,
   layout,
   space,
-  styles,
   text
 };
 

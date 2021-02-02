@@ -4,8 +4,10 @@ const Index = () => {
   return (
     <>
       <Layout>
-        <Heading as="h1">Heading Sidney Wells</Heading>
-        <Text size="m">Medium text Sidney Wells</Text>
+        <Heading pb="s" as="h1">
+          Keep it simple
+        </Heading>
+        <Text size="m"> - work hard and chase your dreams.</Text>
       </Layout>
     </>
   );

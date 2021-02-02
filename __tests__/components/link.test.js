@@ -11,7 +11,4 @@ describe('Link', () => {
   it('should render a large link', () => {
     render(<Link size="l" />);
   });
-  it('should render a default link', () => {
-    render(<Link size="g" />);
-  });
 });
