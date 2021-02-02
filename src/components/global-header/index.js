@@ -11,7 +11,12 @@ const GlobalHeader = () => {
         height: '200px'
       }}
     >
-      <Box sx={{ display: 'table-cell', verticalAlign: 'middle' }}>
+      <Box
+        sx={{
+          display: 'table-cell',
+          verticalAlign: 'middle'
+        }}
+      >
         <Link size="l" href="/">
           HOME
         </Link>
@@ -22,7 +27,7 @@ const GlobalHeader = () => {
         >
           ABOUT
         </Link>
-        <Link size="l" href="/work">
+        <Link size="l" href="/projects">
           PROJECTS
         </Link>
       </Box>

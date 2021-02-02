@@ -1,18 +1,17 @@
-import { Text, Layout, Heading, Box } from '../components';
+import { Layout, Heading, Box } from '../components';
 
-const Index = () => {
+const Projects = () => {
   return (
     <>
       <Layout>
         <Box sx={{ textAlign: 'center' }}>
           <Heading pb="s" as="h1">
-            hi.
+            projects page
           </Heading>
-          <Text size="l">words words words.</Text>
         </Box>
       </Layout>
     </>
   );
 };
 
-export default Index;
+export default Projects;

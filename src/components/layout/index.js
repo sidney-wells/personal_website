@@ -18,7 +18,8 @@ const Layout = ({ children }) => {
           width: '100%',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          variant: 'layout.header'
         }}
       >
         <GlobalHeader />
@@ -27,15 +28,18 @@ const Layout = ({ children }) => {
         sx={{
           width: '100%',
           flex: '1 1 auto',
-          variant: 'layout.main'
+          variant: 'layout.main',
+          display: 'table',
+          minHeight: '100vh'
         }}
       >
         <Box
           sx={{
-            maxWidth: 768,
             mx: 'auto',
             px: 3,
-            variant: 'layout.container'
+            variant: 'layout.container',
+            display: 'table-cell',
+            verticalAlign: 'middle'
           }}
         >
           {children}

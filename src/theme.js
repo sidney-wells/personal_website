@@ -41,21 +41,16 @@ const fontWeights = {
 };
 
 const layout = {
-  root: {
-    backgroundColor: 'violet'
-  },
+  root: {},
   header: {
-    backgroundColor: 'blue',
-    height: '44px'
+    backgroundColor: 'purple',
+    height: '120px'
   },
-  main: {},
-  container: {
-    border: '2px solid white'
+  main: {
+    backgroundColor: 'black'
   },
-  footer: {
-    backgroundColor: 'yellow',
-    height: '44px'
-  }
+  container: {},
+  footer: {}
 };
 
 const space = [5, 15, 25, 50, 80];
