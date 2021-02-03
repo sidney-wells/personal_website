@@ -1,4 +1,4 @@
-import { Text, Layout, Heading, Box } from '../components';
+import { Text, Layout, Heading, Box, ProjectCard, Flex } from '../components';
 
 const Index = () => {
   return (
@@ -6,9 +6,14 @@ const Index = () => {
       <Layout>
         <Box sx={{ textAlign: 'center' }}>
           <Heading pb="s" as="h1">
-            hi.
+            {"hi, i'm sidney."}
           </Heading>
-          <Text size="l">words words words.</Text>
+          <Text size="l">My Recent Projects</Text>
+          <Flex>
+            <ProjectCard>cards will go here</ProjectCard>
+            <ProjectCard>cards will go here</ProjectCard>
+            <ProjectCard>cards will go here</ProjectCard>
+          </Flex>
         </Box>
       </Layout>
     </>

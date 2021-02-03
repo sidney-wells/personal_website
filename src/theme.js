@@ -31,13 +31,38 @@ const fonts = {
   button: '"IBM Plex Sans", sans-serif'
 };
 
-const fontSizes = [12, 13, 14, 16, 20, 24, 42, 56, 72];
+const fontSizes = [12, 13, 16, 24, 32, 48, 42, 56, 72];
 
 const fontWeights = {
   regular: 400,
   medium: 500,
   semiBold: 600,
   bold: 700
+};
+
+const images = {
+  s: {
+    width: '30px',
+    minWidth: '30px',
+    height: '30px',
+    minheight: '30px'
+  },
+  m: {
+    width: '50px',
+    minWidth: '50px',
+    height: '50px',
+    minheight: '50px'
+  },
+  l: {
+    width: '100px',
+    minWidth: '100px',
+    height: '100px',
+    minheight: '100px'
+  },
+  fill: {
+    width: '100%',
+    height: '100%'
+  }
 };
 
 const layout = {
@@ -145,6 +170,7 @@ const theme = {
   fonts,
   fontSizes,
   fontWeights,
+  images,
   layout,
   space,
   text

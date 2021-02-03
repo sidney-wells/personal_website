@@ -6,6 +6,8 @@ export { default as GlobalHeader } from './global-header';
 export { default as Grid } from './grid';
 export { default as Heading } from './heading';
 export { default as Infinity } from './infinity';
+export { default as Image } from './image';
 export { default as Layout } from './layout';
 export { default as Link } from './link';
+export { default as ProjectCard } from './project-card';
 export { default as Text } from './text';
