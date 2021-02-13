@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Diamond = color => {
+const Diamond = ({ color }) => {
   const obj1 = {
     width: '0',
     height: '0',
@@ -33,7 +33,7 @@ Diamond.propTypes = {
 };
 
 Diamond.defaultProps = {
-  color: 'violet'
+  color: `purple`
 };
 
 export default Diamond;

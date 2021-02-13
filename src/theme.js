@@ -1,4 +1,4 @@
-const breakpoints = ['500px', '1020px', '1600'];
+const breakpoints = ['576px', '1023px'];
 
 const buttons = {
   primary: {
@@ -14,10 +14,11 @@ const buttons = {
 };
 
 const colors = {
-  background: 'rgba(37, 37, 37, .5)',
+  background: 'white',
   purple: '#6930c3',
   turq: '#64dfdf',
-  neon: '#80ffdb'
+  neon: '#80ffdb',
+  text: 'rgba(37, 37, 37, .5)'
 };
 
 const headers = {
@@ -25,10 +26,10 @@ const headers = {
 };
 
 const fonts = {
-  heading: '"Poppins", sans-serif',
-  body: '"IBM Plex Sans", sans-serif',
-  input: 'IBM Plex Mono',
-  button: '"IBM Plex Sans", sans-serif'
+  heading: 'Roboto, Helvetica, sans-serif',
+  body: '"Roboto", Helvetica, sans-serif',
+  input: '"Roboto", Helvetica, sans-serif',
+  button: '"Roboto", Helvetica, sans-serif'
 };
 
 const fontSizes = [12, 13, 16, 24, 32, 48, 42, 56, 72];
@@ -57,7 +58,13 @@ const images = {
     width: '100px',
     minWidth: '100px',
     height: '100px',
-    minheight: '100px'
+    minHeight: '100px'
+  },
+  xl: {
+    width: '300px',
+    height: '200px',
+    minWidth: '300px',
+    minHeight: '200px'
   },
   fill: {
     width: '100%',
@@ -68,17 +75,32 @@ const images = {
 const layout = {
   root: {},
   header: {
-    backgroundColor: 'purple',
+    bg: 'black',
     height: '120px'
   },
   main: {
-    backgroundColor: 'black'
+    border: '2px solid blue',
+    alignItems: 'center',
+    boxShadow: 'inset 0px 10px 20px black'
   },
-  container: {},
-  footer: {}
+  container: {
+    hero: {
+      border: '2px solid red',
+      maxWidth: '1200px',
+      minHeight: '100vh'
+    },
+    default: {
+      border: '2px solid yellow',
+      maxWidth: '1200px'
+    }
+  },
+  footer: {
+    bg: 'black',
+    height: '120px'
+  }
 };
 
-const space = [5, 15, 25, 50, 80];
+const space = [5, 15, 25, 50, 80, 150];
 space.xs = space[1];
 space.s = space[2];
 space.m = space[3];

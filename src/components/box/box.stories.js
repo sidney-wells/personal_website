@@ -1,4 +1,3 @@
-import Grid from '../grid';
 import Box from '.';
 
 const story = {
@@ -9,16 +8,17 @@ const story = {
 export default story;
 
 const Template = args => (
-  <Grid>
+  <div>
     <Box bg="Teal" {...args}>
       CONTENT
     </Box>
-  </Grid>
+  </div>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  start: 3,
+  start: 0,
   span: 10,
-  end: 0
+  end: 0,
+  sx: { height: '200px' }
 };

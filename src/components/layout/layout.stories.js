@@ -1,4 +1,5 @@
 import Layout from '.';
+import Section from '../section';
 
 const story = {
   title: 'Atoms/Layout',
@@ -11,5 +12,5 @@ const Template = args => <Layout {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'hello'
+  children: <Section>hello</Section>
 };

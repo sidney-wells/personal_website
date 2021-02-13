@@ -1,13 +1,15 @@
 import Diamond from '.';
 
 const story = {
-  title: 'Shapes/Diamond',
+  title: 'Atoms/Shapes/Diamond',
   component: Diamond
 };
 
 export default story;
 
 const Template = args => <Diamond {...args} />;
+
+export const Default = Template.bind({});
 
 export const Blue = Template.bind({});
 Blue.args = {

@@ -1,9 +1,12 @@
-import { Link, Box, Flex } from '..';
+import { Link, Box, Flex, Text } from '..';
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { useRouter } from 'next/router';
 
 const GlobalHeader = () => {
+  const router = useRouter();
+
   return (
     <Flex
       sx={{
@@ -18,17 +21,66 @@ const GlobalHeader = () => {
         }}
       >
         <Link size="l" href="/">
-          HOME
+          <Text
+            pb="s"
+            sx={{
+              color: router
+                ? router.pathname === '/'
+                  ? 'purple'
+                  : 'inherit'
+                : '',
+              borderBottom: router
+                ? router.pathname === '/'
+                  ? `2px solid #6930c3`
+                  : ''
+                : ''
+            }}
+          >
+            HOME
+          </Text>
         </Link>
         <Link
           size="l"
           sx={{ ml: ['s', 'm', 'l'], mr: ['s', 'm', 'l'] }}
           href="/about"
         >
-          ABOUT
+          <Text
+            pb="s"
+            sx={{
+              color: router
+                ? router.pathname === '/about'
+                  ? 'purple'
+                  : 'inherit'
+                : '',
+              borderBottom: router
+                ? router.pathname === '/about'
+                  ? `2px solid #6930c3`
+                  : ''
+                : ''
+            }}
+          >
+            ABOUT
+          </Text>
         </Link>
+
         <Link size="l" href="/projects">
-          PROJECTS
+          <Text
+            pb="s"
+            sx={{
+              color: router
+                ? router.pathname === '/projects'
+                  ? 'purple'
+                  : 'inherit'
+                : '',
+              borderBottom: router
+                ? router.pathname === '/projects'
+                  ? `2px solid #6930c3`
+                  : ''
+                : ''
+            }}
+          >
+            PROJECTS
+          </Text>
         </Link>
       </Box>
     </Flex>

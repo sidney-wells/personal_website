@@ -6,13 +6,11 @@ const Grid = props => {
 };
 
 Grid.propTypes = {
-  columns: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
-  gap: PropTypes.oneOfType([PropTypes.number, PropTypes.array])
+  columns: PropTypes.oneOfType([PropTypes.number, PropTypes.array])
 };
 
 Grid.defaultProps = {
-  columns: 12,
-  gap: 0
+  columns: 12
 };
 
 export default Grid;

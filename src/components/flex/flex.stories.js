@@ -18,7 +18,8 @@ const Template = args => (
 
 export const Default = Template.bind({});
 Default.args = {
-  start: 3,
+  start: 0,
   span: 10,
-  end: 0
+  end: 0,
+  sx: { height: '50vh' }
 };

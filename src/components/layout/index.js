@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { GlobalHeader, Box } from '..';
+import { GlobalHeader, Box, Footer } from '..';
 
 const Layout = ({ children }) => {
   return (
@@ -10,7 +10,9 @@ const Layout = ({ children }) => {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        m: '0px',
+        p: '0px'
       }}
     >
       <header
@@ -36,15 +38,14 @@ const Layout = ({ children }) => {
         <Box
           sx={{
             mx: 'auto',
-            px: 3,
-            variant: 'layout.container',
-            display: 'table-cell',
-            verticalAlign: 'middle'
+            variant: 'layout.main',
+            display: 'table-cell'
           }}
         >
           {children}
         </Box>
       </main>
+      <Footer />
     </div>
   );
 };

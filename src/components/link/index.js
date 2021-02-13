@@ -9,8 +9,7 @@ const Link = ({ href, size, children, ...props }) => {
     textDecoration: 'none',
     color: 'neon',
     '&:hover': {
-      color: 'black',
-      textDecoration: 'underline'
+      color: 'purple'
     }
   };
   const linkSize =

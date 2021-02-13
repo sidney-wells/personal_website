@@ -1,7 +1,7 @@
 import InfinitySymbol from '.';
 
 const story = {
-  title: 'Shapes/InfinitySymbol',
+  title: 'Atoms/Shapes/InfinitySymbol',
   component: InfinitySymbol
 };
 

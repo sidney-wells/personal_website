@@ -6,13 +6,15 @@ const Image = ({ size, ...props }) => {
 };
 
 Image.propTypes = {
-  size: PropTypes.oneOf(['s', 'm', 'l', 'fill']),
-  src: PropTypes.string
+  size: PropTypes.oneOf(['s', 'm', 'l', 'xl', 'fill']),
+  src: PropTypes.string,
+  href: PropTypes.string
 };
 
 Image.defaultProps = {
   size: 's',
-  src: '../../images/home.jpg'
+  src: '../../images/home.jpg',
+  href: 'https:www.google.com'
 };
 
 export default Image;

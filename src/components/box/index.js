@@ -21,4 +21,9 @@ Box.propTypes = {
   sx: PropTypes.object
 };
 
+Box.defaultProps = {
+  start: 1,
+  end: 12
+};
+
 export default Box;
