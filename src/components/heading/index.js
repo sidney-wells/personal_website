@@ -11,6 +11,7 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
+  as: 'h1',
   size: 'medium'
 };
 

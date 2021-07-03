@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'theme-ui';
-import theme from '../theme';
+import theme, { globalStyles } from '../theme';
 import React from 'react';
 import { Global, css } from '@emotion/react';
 
@@ -8,9 +8,7 @@ const App = ({ Component, pageProps }) => {
     <div>
       <Global
         styles={css`
-          body {
-            margin: 0px;
-          }
+          ${globalStyles}
         `}
       />
       <ThemeProvider theme={theme}>

@@ -2,9 +2,16 @@ const breakpoints = ['576px', '1023px'];
 
 const buttons = {
   primary: {
-    color: 'white',
-    backgroundColor: 'black',
-    borderColor: '2px solid white'
+    fontFamily: 'header',
+    color: 'black',
+    backgroundColor: 'transparent',
+    borderColor: '2px solid black',
+    fontSize: '20px',
+    padding: '10px 20px',
+    fontWeight: 'bold',
+    '&:hover': {
+      color: 'blue'
+    }
   },
   secondary: {
     color: 'black',
@@ -18,7 +25,8 @@ const colors = {
   purple: '#6930c3',
   turq: '#64dfdf',
   neon: '#80ffdb',
-  text: 'rgba(37, 37, 37, .5)'
+  text: 'rgba(37, 37, 37, .5)',
+  black: 'black'
 };
 
 const headers = {
@@ -29,7 +37,8 @@ const fonts = {
   heading: 'Roboto, Helvetica, sans-serif',
   body: '"Roboto", Helvetica, sans-serif',
   input: '"Roboto", Helvetica, sans-serif',
-  button: '"Roboto", Helvetica, sans-serif'
+  button: '"Roboto", Helvetica, sans-serif',
+  header: '"Koho", Helvetica, sans-serif'
 };
 
 const fontSizes = [12, 13, 16, 24, 32, 48, 42, 56, 72];
@@ -75,28 +84,26 @@ const images = {
 const layout = {
   root: {},
   header: {
-    bg: 'black',
-    height: '120px'
+    bg: '#BEBEBE'
   },
   main: {
     border: '2px solid blue',
     alignItems: 'center',
-    boxShadow: 'inset 0px 10px 20px black'
-  },
-  container: {
-    hero: {
-      border: '2px solid red',
-      maxWidth: '1200px',
-      minHeight: '100vh'
+    primary: {
+      backgroundColor: '#F5F5F5'
     },
-    default: {
-      border: '2px solid yellow',
-      maxWidth: '1200px'
+    secondary: {
+      backgroundColor: '#FFFFFF'
     }
   },
+  container: {
+    maxWidth: '1200px',
+    border: '2px solid red',
+    minHeight: '100vh',
+    margin: 'auto'
+  },
   footer: {
-    bg: 'black',
-    height: '120px'
+    backgroundColor: '#BEBEBE'
   }
 };
 
@@ -110,42 +117,42 @@ space.xl = space[5];
 const text = {
   heading: {
     h1: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: [7, 8],
-      fontWeight: 'bold',
+      fontWeight: 'regular',
       lineHeight: ['40px', '58px'],
       letterSpacing: ['-0.6', '-1px']
     },
     h2: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: [6, 7],
       fontWeight: 'regular',
       lineHeight: ['40px', '48px'],
       letterSpacing: ['-0.5px', '-1.5px']
     },
     h3: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: 5,
       fontWeight: 'regular',
       lineHeight: '32px',
       letterSpacing: '-1px'
     },
     h4: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: 4,
       fontWeight: 'medium',
       lineHeight: '28px',
       letterSpacing: '-0.75px'
     },
     h5: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: 2,
       fontWeight: 'semiBold',
       lineHeight: '24px',
       letterSpacing: '-0.5px'
     },
     h6: {
-      color: colors.purple,
+      color: colors.black,
       fontSize: 0,
       fontWeight: 'regular',
       lineHeight: '20px',
@@ -154,7 +161,7 @@ const text = {
   },
   paragraph: {
     s: {
-      color: colors.turq,
+      color: colors.black,
       fontFamily: 'body',
       fontSize: 1,
       fontWeight: 'regular',
@@ -162,7 +169,7 @@ const text = {
       letterSpacing: 0
     },
     m: {
-      color: colors.turq,
+      color: colors.black,
       fontFamily: 'body',
       fontSize: 3,
       fontWeight: 'regular',
@@ -170,7 +177,7 @@ const text = {
       letterSpacing: 0
     },
     l: {
-      color: colors.turq,
+      color: colors.black,
       fontFamily: 'body',
       fontSize: 4,
       fontWeight: 'medium',
@@ -182,7 +189,11 @@ const text = {
 
 export const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
-`;
+  @import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap');
+  body {
+    margin: 0px;
+  }
+  `;
 
 const theme = {
   breakpoints,

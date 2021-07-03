@@ -1,89 +1,74 @@
-import { Link, Box, Flex, Text } from '..';
+import { Flex, Button } from '..';
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { useRouter } from 'next/router';
+import { Grid } from 'theme-ui';
+import { SocialIcon } from 'react-social-icons';
 
 const GlobalHeader = () => {
   const router = useRouter();
 
+  const pathName = router.pathname;
+
   return (
-    <Flex
+    <Grid
       sx={{
-        display: 'table',
-        height: '200px'
+        verticalAlign: 'middle',
+        height: '60px'
       }}
     >
-      <Box
-        sx={{
-          display: 'table-cell',
-          verticalAlign: 'middle'
-        }}
-      >
-        <Link size="l" href="/">
-          <Text
-            pb="s"
-            sx={{
-              color: router
-                ? router.pathname === '/'
-                  ? 'purple'
-                  : 'inherit'
-                : '',
-              borderBottom: router
-                ? router.pathname === '/'
-                  ? `2px solid #6930c3`
-                  : ''
-                : ''
-            }}
-          >
-            HOME
-          </Text>
-        </Link>
-        <Link
-          size="l"
-          sx={{ ml: ['s', 'm', 'l'], mr: ['s', 'm', 'l'] }}
-          href="/about"
+      <Flex start={1} end={2} sx={{ justifyContent: 'flex-start' }}>
+        <Button
+          data-testid="home"
+          sx={{ color: pathName === '/' ? 'blue' : '' }}
+          onClick={() => router.push('/')}
         >
-          <Text
-            pb="s"
-            sx={{
-              color: router
-                ? router.pathname === '/about'
-                  ? 'purple'
-                  : 'inherit'
-                : '',
-              borderBottom: router
-                ? router.pathname === '/about'
-                  ? `2px solid #6930c3`
-                  : ''
-                : ''
-            }}
-          >
-            ABOUT
-          </Text>
-        </Link>
-
-        <Link size="l" href="/projects">
-          <Text
-            pb="s"
-            sx={{
-              color: router
-                ? router.pathname === '/projects'
-                  ? 'purple'
-                  : 'inherit'
-                : '',
-              borderBottom: router
-                ? router.pathname === '/projects'
-                  ? `2px solid #6930c3`
-                  : ''
-                : ''
-            }}
-          >
-            PROJECTS
-          </Text>
-        </Link>
-      </Box>
-    </Flex>
+          Sidney Wells
+        </Button>
+      </Flex>
+      <Flex
+        start={2}
+        end={10}
+        sx={{ alignItems: 'center', justifyContent: 'center' }}
+      >
+        <Button
+          data-testid="about"
+          sx={{ color: pathName === '/about' ? 'blue' : '' }}
+          onClick={() => router.push('/about')}
+        >
+          ABOUT
+        </Button>
+        <Button
+          data-testid="projects"
+          sx={{ color: pathName === '/projects' ? 'blue' : '' }}
+          onClick={() => router.push('/projects')}
+        >
+          PROJECTS
+        </Button>
+        <Button
+          data-testid="resume"
+          sx={{ color: pathName === '/resume' ? 'blue' : '' }}
+          onClick={() => router.push('/resume')}
+        >
+          RESUME
+        </Button>
+        <Button
+          data-testid="contact"
+          sx={{ color: pathName === '/contact' ? 'blue' : '' }}
+          onClick={() => router.push('/contact')}
+        >
+          CONTACT
+        </Button>
+      </Flex>
+      <Flex
+        start={10}
+        end={12}
+        sx={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}
+      >
+        <SocialIcon url="https://github.com/sidney-wells" />{' '}
+      </Flex>
+    </Grid>
   );
 };
 

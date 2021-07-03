@@ -10,7 +10,8 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
-  columns: 12
+  columns: 12,
+  gap: 15
 };
 
 export default Grid;

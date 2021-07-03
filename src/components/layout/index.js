@@ -2,25 +2,19 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { GlobalHeader, Box, Footer } from '..';
+import PropTypes from 'prop-types';
 
-const Layout = ({ children }) => {
+const Layout = ({ variant, children }) => {
   return (
     <div
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
         minHeight: '100vh',
-        justifyContent: 'space-between',
         m: '0px',
         p: '0px'
       }}
     >
       <header
         sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
           variant: 'layout.header'
         }}
       >
@@ -38,7 +32,7 @@ const Layout = ({ children }) => {
         <Box
           sx={{
             mx: 'auto',
-            variant: 'layout.main',
+            variant: `layout.main.${variant}`,
             display: 'table-cell'
           }}
         >
@@ -48,6 +42,10 @@ const Layout = ({ children }) => {
       <Footer />
     </div>
   );
+};
+
+Layout.propTypes = {
+  variant: PropTypes.string
 };
 
 export default Layout;

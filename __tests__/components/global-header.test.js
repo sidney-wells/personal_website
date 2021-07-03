@@ -1,8 +1,39 @@
-import { render } from '../../test-utils';
+import { render, screen, userEvent } from '../../test-utils';
 import { GlobalHeader } from '../../src/components';
+import { useRouter } from 'next/router';
+
+jest.mock('next/router');
 
 describe('Global Header', () => {
-  it('should render a global header', () => {
+  let pathname;
+
+  it('should render a global header from homepage and click each header link', () => {
+    pathname = '/';
+    useRouter.mockImplementation(() => ({
+      push: jest.fn(),
+      pathname
+    }));
+    render(<GlobalHeader />);
+    userEvent.click(screen.getByTestId('home'));
+    userEvent.click(screen.getByTestId('about'));
+    userEvent.click(screen.getByTestId('projects'));
+    userEvent.click(screen.getByTestId('resume'));
+    userEvent.click(screen.getByTestId('contact'));
+  });
+
+  it('should render a global header from resume page', () => {
+    pathname = '/resume';
+    useRouter.mockImplementation(() => ({
+      pathname
+    }));
+    render(<GlobalHeader />);
+  });
+
+  it('should render a global header from contact page', () => {
+    pathname = '/contact';
+    useRouter.mockImplementation(() => ({
+      pathname
+    }));
     render(<GlobalHeader />);
   });
 });
