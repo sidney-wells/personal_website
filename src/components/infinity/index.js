@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 import _JSXStyle from 'styled-jsx/style'; // eslint-disable-line no-unused-vars
 
-const InfinitySymbol = ({ color }) => {
-  return (
-    <div id="infinity">
-      <style jsx>{`
+const InfinitySymbol = ({ color }) => (
+  <div id="infinity">
+    <style jsx>
+      {`
         #infinity {
           position: relative;
           width: 212px;
@@ -33,10 +33,10 @@ const InfinitySymbol = ({ color }) => {
           border-radius: 50px 50px 50px 0;
           transform: rotate(45deg);
         }
-      `}</style>
-    </div>
-  );
-};
+      `}
+    </style>
+  </div>
+);
 
 InfinitySymbol.propTypes = {
   color: PropTypes.string

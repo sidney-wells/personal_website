@@ -1,10 +1,9 @@
-import { Flex, Button } from '..';
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { useRouter } from 'next/router';
-import { Grid } from 'theme-ui';
-import { SocialIcon } from 'react-social-icons';
+import { Flex, Button, Grid, Heading } from '..';
+// import { SocialIcon } from 'react-social-icons';
 
 const GlobalHeader = () => {
   const router = useRouter();
@@ -14,25 +13,33 @@ const GlobalHeader = () => {
   return (
     <Grid
       sx={{
-        verticalAlign: 'middle',
-        height: '60px'
+        hight: '60px'
       }}
+      sdfafdsa
     >
-      <Flex start={1} end={2} sx={{ justifyContent: 'flex-start' }}>
-        <Button
+      <Flex
+        start={1}
+        end={2}
+        pl="s"
+        sx={{ alignItems: 'center', justifyContent: 'center' }}
+      >
+        {/* <Button
           data-testid="home"
           sx={{ color: pathName === '/' ? 'blue' : '' }}
           onClick={() => router.push('/')}
         >
-          Sidney Wells
-        </Button>
+
+        </Button> */}
+        <Heading as="h4" onClick={() => router.push('/')}>
+          Sidney
+        </Heading>
       </Flex>
       <Flex
         start={2}
         end={10}
         sx={{ alignItems: 'center', justifyContent: 'center' }}
       >
-        <Button
+        {/* <Button
           data-testid="about"
           sx={{ color: pathName === '/about' ? 'blue' : '' }}
           onClick={() => router.push('/about')}
@@ -45,7 +52,7 @@ const GlobalHeader = () => {
           onClick={() => router.push('/projects')}
         >
           PROJECTS
-        </Button>
+        </Button> */}
         <Button
           data-testid="resume"
           sx={{ color: pathName === '/resume' ? 'blue' : '' }}
@@ -61,13 +68,13 @@ const GlobalHeader = () => {
           CONTACT
         </Button>
       </Flex>
-      <Flex
-        start={10}
+      {/* <Flex
+        start={11}
         end={12}
         sx={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}
       >
         <SocialIcon url="https://github.com/sidney-wells" />{' '}
-      </Flex>
+      </Flex> */}
     </Grid>
   );
 };

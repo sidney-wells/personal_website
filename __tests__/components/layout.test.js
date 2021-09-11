@@ -1,6 +1,7 @@
+import { useRouter } from 'next/router';
 import { Layout } from '../../src/components';
 import { render } from '../../test-utils';
-import { useRouter } from 'next/router';
+
 jest.mock('next/router');
 
 describe('Layout', () => {

@@ -1,25 +1,23 @@
+import { jsx } from 'theme-ui';
 import { Box, Flex, Text } from '..';
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
 
 const Footer = () => {
-  const Copyright = () => {
-    return (
-      <Flex
-        sx={{
-          justifyContent: 'center',
-          verticalAlign: 'middle'
-        }}
-      >
-        <Text pr="5px">{'Copyright'}</Text>
-        <Text pr="5px">{'©'}</Text>
-        <Text pr="5px">Sidney Wells</Text>
+  const Copyright = () => (
+    <Flex
+      sx={{
+        justifyContent: 'center',
+        verticalAlign: 'middle'
+      }}
+    >
+      <Text pr="5px">Copyright</Text>
+      <Text pr="5px">©</Text>
+      <Text pr="5px">Sidney Wells</Text>
 
-        <Text>{new Date().getFullYear()}</Text>
-      </Flex>
-    );
-  };
+      <Text>{new Date().getFullYear()}</Text>
+    </Flex>
+  );
 
   return (
     <Flex

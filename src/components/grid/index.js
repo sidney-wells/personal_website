@@ -1,9 +1,7 @@
 import { Grid as BaseGrid } from 'theme-ui';
 import PropTypes from 'prop-types';
 
-const Grid = props => {
-  return <BaseGrid {...props} />;
-};
+const Grid = props => <BaseGrid {...props} />;
 
 Grid.propTypes = {
   columns: PropTypes.oneOfType([PropTypes.number, PropTypes.array])
@@ -11,7 +9,7 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   columns: 12,
-  gap: 15
+  gap: 10
 };
 
 export default Grid;

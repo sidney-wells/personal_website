@@ -22,8 +22,8 @@ const Diamond = ({ color }) => {
 
   return (
     <>
-      <div style={obj1}></div>
-      <div style={obj2}></div>
+      <div style={obj1} />
+      <div style={obj2} />
     </>
   );
 };
@@ -33,7 +33,7 @@ Diamond.propTypes = {
 };
 
 Diamond.defaultProps = {
-  color: `purple`
+  color: 'purple'
 };
 
 export default Diamond;

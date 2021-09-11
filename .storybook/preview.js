@@ -1,4 +1,3 @@
-
 import { ThemeProvider } from 'theme-ui';
 import theme from '../src/theme';
 import './storybook.css';
@@ -6,7 +5,7 @@ import './storybook.css';
 export const decorators = [
   Story => (
     <ThemeProvider theme={theme}>
-        <Story />
+      <Story />
     </ThemeProvider>
   )
 ];

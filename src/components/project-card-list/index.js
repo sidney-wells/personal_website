@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types';
 import { ProjectCard, Grid } from '..';
 
-const ProjectCardList = ({ projectCards, ...props }) => {
-  return (
-    <Grid columns={[1, 2, 3]} {...props}>
-      {projectCards.map((projectCard, index) => (
-        <ProjectCard
-          key={projectCard.id}
-          skill={projectCard}
-          {...props}
-          data-testid={index}
-        />
-      ))}
-    </Grid>
-  );
-};
+const ProjectCardList = ({ projectCards, ...props }) => (
+  <Grid columns={[1, 2, 3]} {...props}>
+    {projectCards.map((projectCard, index) => (
+      <ProjectCard
+        key={projectCard.id}
+        skill={projectCard}
+        {...props}
+        data-testid={index}
+      />
+    ))}
+  </Grid>
+);
 
 ProjectCardList.propTypes = {
   projectCards: PropTypes.arrayOf(ProjectCard.propTypes.projectCard)

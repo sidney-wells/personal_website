@@ -1,12 +1,12 @@
 "Roboto", "Helvetica", "Arial", sans-serif
+
 ## Getting Started
 
 ## Learn More
 
 ## Deploy on Vercel
 
-
-Portfolio Stuff
+## Portfolio Stuff
 
 Keeping it Simple w/ MAIN FOCUS on Projects
 
@@ -19,13 +19,13 @@ Keeping it Simple w/ MAIN FOCUS on Projects
 - Contact
   ---- link to email & github
 
-PROJECTS
+## PROJECTS
 
 - Photo/Link to site
 - Link to Site
 - Link to Code
 
-5 Projects
+## Projects (all in progres)
 
 1. Real Estate Website
 2. Restaurant Website

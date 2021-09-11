@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'theme-ui';
-import theme from './src/theme';
 import userEvent from '@testing-library/user-event';
+import PropTypes from 'prop-types';
+import theme from './src/theme';
 
-const Providers = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-};
+const Providers = ({ children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
 
 const customRender = (ui, options) =>
   render(ui, { wrapper: Providers, ...options });
@@ -14,3 +15,10 @@ const customRender = (ui, options) =>
 export * from '@testing-library/react';
 export { customRender as render };
 export { userEvent };
+
+Providers.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};

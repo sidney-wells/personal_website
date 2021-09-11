@@ -1,18 +1,16 @@
 import { Flex as BaseFlex } from 'theme-ui';
 import PropTypes from 'prop-types';
 
-const Flex = ({ start, end, span, sx, ...props }) => {
-  return (
-    <BaseFlex
-      sx={{
-        gridColumnStart: start,
-        gridColumnEnd: span ? `span ${span}` : end,
-        ...sx
-      }}
-      {...props}
-    />
-  );
-};
+const Flex = ({ start, end, span, sx, ...props }) => (
+  <BaseFlex
+    sx={{
+      gridColumnStart: start,
+      gridColumnEnd: span ? `span ${span}` : end,
+      ...sx
+    }}
+    {...props}
+  />
+);
 
 Flex.propTypes = {
   start: PropTypes.number,

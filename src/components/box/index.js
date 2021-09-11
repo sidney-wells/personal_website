@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
 import { Box as BaseBox } from 'theme-ui';
 
-const Box = ({ start, end, span, sx, ...props }) => {
-  return (
-    <BaseBox
-      sx={{
-        gridColumnStart: start,
-        gridColumnEnd: span ? `span ${span}` : end,
-        ...sx
-      }}
-      {...props}
-    />
-  );
-};
+const Box = ({ start, end, span, sx, ...props }) => (
+  <BaseBox
+    sx={{
+      gridColumnStart: start,
+      gridColumnEnd: span ? `span ${span}` : end,
+      ...sx
+    }}
+    {...props}
+  />
+);
 
 Box.propTypes = {
   start: PropTypes.number,

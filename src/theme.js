@@ -3,7 +3,7 @@ const breakpoints = ['576px', '1023px'];
 const buttons = {
   primary: {
     fontFamily: 'header',
-    color: 'black',
+    color: 'white',
     backgroundColor: 'transparent',
     borderColor: '2px solid black',
     fontSize: '20px',
@@ -84,13 +84,13 @@ const images = {
 const layout = {
   root: {},
   header: {
-    bg: '#BEBEBE'
+    bg: '#0e172d' // previously gray #BEBEBE
   },
   main: {
     border: '2px solid blue',
     alignItems: 'center',
     primary: {
-      backgroundColor: '#F5F5F5'
+      backgroundColor: '#0e172d' // previous white-ish #F5F5F5
     },
     secondary: {
       backgroundColor: '#FFFFFF'
@@ -103,7 +103,7 @@ const layout = {
     margin: 'auto'
   },
   footer: {
-    backgroundColor: '#BEBEBE'
+    backgroundColor: '#0e172d' // previously gray #BEBEBE
   }
 };
 

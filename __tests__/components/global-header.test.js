@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router';
 import { render, screen, userEvent } from '../../test-utils';
 import { GlobalHeader } from '../../src/components';
-import { useRouter } from 'next/router';
 
 jest.mock('next/router');
 
