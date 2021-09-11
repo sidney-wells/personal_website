@@ -14,26 +14,26 @@ describe('Global Header', () => {
       pathname
     }));
     render(<GlobalHeader />);
-    userEvent.click(screen.getByTestId('home'));
-    userEvent.click(screen.getByTestId('about'));
-    userEvent.click(screen.getByTestId('projects'));
+    // userEvent.click(screen.getByTestId('home'));
+    // userEvent.click(screen.getByTestId('about'));
+    // userEvent.click(screen.getByTestId('projects'));
     userEvent.click(screen.getByTestId('resume'));
     userEvent.click(screen.getByTestId('contact'));
   });
 
-  it('should render a global header from resume page', () => {
-    pathname = '/resume';
-    useRouter.mockImplementation(() => ({
-      pathname
-    }));
-    render(<GlobalHeader />);
-  });
+  // it('should render a global header from resume page', () => {
+  //   pathname = '/resume';
+  //   useRouter.mockImplementation(() => ({
+  //     pathname
+  //   }));
+  //   render(<GlobalHeader />);
+  // });
 
-  it('should render a global header from contact page', () => {
-    pathname = '/contact';
-    useRouter.mockImplementation(() => ({
-      pathname
-    }));
-    render(<GlobalHeader />);
-  });
+  // it('should render a global header from contact page', () => {
+  //   pathname = '/contact';
+  //   useRouter.mockImplementation(() => ({
+  //     pathname
+  //   }));
+  //   render(<GlobalHeader />);
+  // });
 });

@@ -9,7 +9,7 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "lint": "eslint --fix .",
     "next": "next lint",
-    "precommit": "yarn lint && jest --lastCommit",
+    "precommit": "yarn lint && jest --lastCommit && yarn coverage",
     "test": "jest",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
