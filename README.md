@@ -1,12 +1,4 @@
-"Roboto", "Helvetica", "Arial", sans-serif
-
-## Getting Started
-
-## Learn More
-
-## Deploy on Vercel
-
-## Portfolio Stuff
+## Portfolio Stuff - in progress
 
 Keeping it Simple w/ MAIN FOCUS on Projects
 
@@ -25,7 +17,7 @@ Keeping it Simple w/ MAIN FOCUS on Projects
 - Link to Site
 - Link to Code
 
-## Projects (all in progres)
+## Projects (ideas)
 
 1. Real Estate Website
 2. Restaurant Website
