@@ -1,4 +1,4 @@
-## Portfolio Stuff - in progress
+## Portfolio Stuff - in progress - https://personal-website-sidney-wells.vercel.app/
 
 Keeping it Simple w/ MAIN FOCUS on Projects
 
