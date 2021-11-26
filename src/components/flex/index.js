@@ -13,9 +13,9 @@ const Flex = ({ start, end, span, sx, ...props }) => (
 );
 
 Flex.propTypes = {
-  start: PropTypes.number,
-  end: PropTypes.number,
-  span: PropTypes.number,
+  start: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  end: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
+  span: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
   sx: PropTypes.object
 };
 

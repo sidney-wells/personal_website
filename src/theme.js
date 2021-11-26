@@ -2,21 +2,24 @@ const breakpoints = ['576px', '1023px'];
 
 const buttons = {
   primary: {
-    fontFamily: 'header',
-    color: 'white',
+    fontFamily: 'IBMPlex',
+    color: 'black',
     backgroundColor: 'transparent',
     borderColor: '2px solid black',
     fontSize: '20px',
     padding: '10px 20px',
     fontWeight: 'bold',
     '&:hover': {
-      color: 'blue'
+      bg: 'blue'
     }
   },
   secondary: {
     color: 'black',
     backgroundColor: 'white',
-    borderColor: '2px solid black'
+    borderColor: '2px solid black',
+    '&:hover': {
+      bg: 'blue'
+    }
   }
 };
 
@@ -38,10 +41,11 @@ const fonts = {
   body: '"Roboto", Helvetica, sans-serif',
   input: '"Roboto", Helvetica, sans-serif',
   button: '"Roboto", Helvetica, sans-serif',
-  header: '"Koho", Helvetica, sans-serif'
+  header: '"Roboto", Helvetica, sans-serif',
+  IBMPlex: 'IBM Plex Sans Arabic, sans-serif'
 };
 
-const fontSizes = [12, 13, 16, 24, 32, 48, 42, 56, 72];
+const fontSizes = [12, 13, 16, 20, 24, 48, 56, 72];
 
 const fontWeights = {
   regular: 400,
@@ -84,11 +88,17 @@ const images = {
 const layout = {
   root: {},
   header: {
-    bg: '#0e172d' // previously gray #BEBEBE
+    bg: '#0e172d', // previously gray #BEBEBE
+    overflow: 'hidden',
+    width: '100%' /* Full width */,
+    position: 'fixed', // Set the navbar to fixed position
+    top: 0, // Position the navbar at the top of the page
+    mt: '-5px',
+    p: '0px',
+    borderBottom: '1px solid #C0C0C0'
   },
   main: {
     border: '2px solid blue',
-    alignItems: 'center',
     primary: {
       backgroundColor: '#0e172d' // previous white-ish #F5F5F5
     },
@@ -99,7 +109,9 @@ const layout = {
   container: {
     maxWidth: '1200px',
     border: '2px solid red',
-    minHeight: '100vh',
+    primary: {
+      minHeight: 'calc(100vh - 60px)'
+    },
     margin: 'auto'
   },
   footer: {
@@ -117,68 +129,64 @@ space.xl = space[5];
 const text = {
   heading: {
     h1: {
-      color: colors.black,
-      fontSize: [7, 8],
-      fontWeight: 'regular',
+      fontSize: [7],
+      fontFamily: fonts.IBMPlex,
       lineHeight: ['40px', '58px'],
       letterSpacing: ['-0.6', '-1px']
     },
     h2: {
-      color: colors.black,
-      fontSize: [6, 7],
-      fontWeight: 'regular',
+      fontSize: [6],
+      fontFamily: fonts.IBMPlex,
       lineHeight: ['40px', '48px'],
-      letterSpacing: ['-0.5px', '-1.5px']
+      letterSpacing: ['2px', '2px']
     },
     h3: {
-      color: colors.black,
       fontSize: 5,
-      fontWeight: 'regular',
-      lineHeight: '32px',
-      letterSpacing: '-1px'
+      fontFamily: fonts.IBMPlex,
+      lineHeight: '48px',
+      letterSpacing: '3px'
     },
     h4: {
-      color: colors.black,
-      fontSize: 4,
-      fontWeight: 'medium',
+      fontSize: 3,
+      fontFamily: fonts.IBMPlex,
       lineHeight: '28px',
-      letterSpacing: '-0.75px'
+      letterSpacing: '2px'
     },
     h5: {
-      color: colors.black,
       fontSize: 2,
       fontWeight: 'semiBold',
+      fontFamily: fonts.IBMPlex,
       lineHeight: '24px',
-      letterSpacing: '-0.5px'
+      letterSpacing: '2px'
     },
     h6: {
-      color: colors.black,
       fontSize: 0,
       fontWeight: 'regular',
+      fontFamily: fonts.IBMPlex,
       lineHeight: '20px',
-      letterSpacing: '-0.5px'
+      letterSpacing: '2px'
     }
   },
   paragraph: {
     s: {
-      color: colors.black,
-      fontFamily: 'body',
+      color: 'black',
+      fontFamily: 'IBMPlex',
       fontSize: 1,
       fontWeight: 'regular',
       lineHeight: '26px',
       letterSpacing: 0
     },
     m: {
-      color: colors.black,
-      fontFamily: 'body',
+      color: 'black',
+      fontFamily: 'IBMPlex',
       fontSize: 3,
       fontWeight: 'regular',
       lineHeight: '28px',
       letterSpacing: 0
     },
     l: {
-      color: colors.black,
-      fontFamily: 'body',
+      color: 'black',
+      fontFamily: 'IBMPlex',
       fontSize: 4,
       fontWeight: 'medium',
       lineHeight: '50px',
@@ -190,6 +198,10 @@ const text = {
 export const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&display=swap');
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0px;
   }

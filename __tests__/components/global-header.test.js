@@ -17,12 +17,12 @@ describe('Global Header', () => {
     // userEvent.click(screen.getByTestId('home'));
     // userEvent.click(screen.getByTestId('about'));
     // userEvent.click(screen.getByTestId('projects'));
-    userEvent.click(screen.getByTestId('resume'));
-    userEvent.click(screen.getByTestId('contact'));
+    // userEvent.click(screen.getByTestId('portfolio'));
+    // userEvent.click(screen.getByTestId('contact'));
   });
 
-  // it('should render a global header from resume page', () => {
-  //   pathname = '/resume';
+  // it('should render a global header from portfolio page', () => {
+  //   pathname = '/portfolio';
   //   useRouter.mockImplementation(() => ({
   //     pathname
   //   }));

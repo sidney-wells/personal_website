@@ -4,12 +4,12 @@ import { jsx } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { GlobalHeader, Box, Footer } from '..';
 
-const Layout = ({ variant, children }) => (
+const Layout = ({ router, variant, children, ...props }) => (
   <div
     sx={{
-      minHeight: '100vh',
       m: '0px',
-      p: '0px'
+      p: '0px',
+      scrollBehavior: 'smooth'
     }}
   >
     <header
@@ -17,15 +17,14 @@ const Layout = ({ variant, children }) => (
         variant: 'layout.header'
       }}
     >
-      <GlobalHeader />
+      <GlobalHeader router={router} />
     </header>
     <main
       sx={{
         width: '100%',
         flex: '1 1 auto',
         variant: 'layout.main',
-        display: 'table',
-        minHeight: '100vh'
+        display: 'table'
       }}
     >
       <Box
@@ -34,6 +33,7 @@ const Layout = ({ variant, children }) => (
           variant: `layout.main.${variant}`,
           display: 'table-cell'
         }}
+        {...props}
       >
         {children}
       </Box>
@@ -43,6 +43,7 @@ const Layout = ({ variant, children }) => (
 );
 
 Layout.propTypes = {
+  router: PropTypes.object,
   variant: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

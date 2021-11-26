@@ -11,8 +11,7 @@ const Template = args => <Image {...args} />;
 
 export const ImageSmall = Template.bind({});
 ImageSmall.args = {
-  size: 's',
-  src: '../../images/home.jpg'
+  size: 's'
 };
 
 export const ImageMedium = Template.bind({});
@@ -25,7 +24,7 @@ ImageLarge.args = {
   size: 'l'
 };
 
-export const ImageExtraLarge = Template.bind({});
-ImageExtraLarge.args = {
+export const ImageFill = Template.bind({});
+ImageFill.args = {
   size: 'fill'
 };

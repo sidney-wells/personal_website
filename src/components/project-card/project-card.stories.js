@@ -1,4 +1,5 @@
 import ProjectCard from '.';
+import Grid from '../grid';
 
 const story = {
   title: 'Molecules/Project Card',
@@ -7,6 +8,10 @@ const story = {
 
 export default story;
 
-const Template = args => <ProjectCard {...args} />;
+const Template = args => (
+  <Grid>
+    <ProjectCard {...args} />
+  </Grid>
+);
 
 export const Default = Template.bind({});

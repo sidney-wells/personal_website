@@ -12,5 +12,6 @@ const Template = args => <Layout {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  variant: 'primary',
   children: <Section>hello</Section>
 };

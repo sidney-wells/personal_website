@@ -1,17 +1,18 @@
+import { Flex } from '@theme-ui/components';
 import PropTypes from 'prop-types';
 import { Card } from 'theme-ui';
-import { Image, Text, Link } from '..';
+import { Image, Text, Link, Box } from '..';
 
 const ProjectCard = ({ projectCard: { link, description } }) => (
   <Card
     sx={{
-      borderColor: '2px solid green'
+      bg: 'green'
     }}
   >
-    <Image size="xl" sx={{ borderRadius: '15px' }} />
-    <Link py="xs" href={link.href}>
-      {link.title}
-    </Link>
+    <Image size="fill" sx={{ borderRadius: '15px' }} />
+    {/* <Link py="xs" href={link.href}>
+        {link.title}
+      </Link> */}
     <Text size="s">{description}</Text>
   </Card>
 );

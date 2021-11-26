@@ -8,7 +8,7 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
-  columns: 12,
+  columns: [4, 8, 12],
   gap: 10
 };
 

@@ -1,82 +1,70 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { useRouter } from 'next/router';
-import { Flex, Button, Grid, Heading } from '..';
+import { Flex, Button, Grid, Heading, Link } from '..';
 // import { SocialIcon } from 'react-social-icons';
+import PropTypes from 'prop-types';
 
-const GlobalHeader = () => {
-  const router = useRouter();
-
+const GlobalHeader = ({ router }) => {
   const pathName = router.pathname;
 
   return (
     <Grid
+      px="s"
       sx={{
-        hight: '60px'
+        height: '60px'
       }}
-      sdfafdsa
     >
-      <Flex
-        start={1}
-        end={2}
-        pl="s"
-        sx={{ alignItems: 'center', justifyContent: 'center' }}
-      >
-        {/* <Button
-          data-testid="home"
-          sx={{ color: pathName === '/' ? 'blue' : '' }}
-          onClick={() => router.push('/')}
+      <Flex start={[0]} end={[2]} sx={{ alignItems: 'center' }}>
+        <Link
+          as="h6"
+          data-testid="contact"
+          href="#part1"
+          sx={{
+            borderBottom: pathName === '/contact' ? '1px solid white' : ''
+          }}
         >
-
-        </Button> */}
-        <Heading as="h4" onClick={() => router.push('/')}>
-          Sidney
-        </Heading>
+          SYMBOL
+        </Link>
       </Flex>
       <Flex
-        start={2}
-        end={10}
-        sx={{ alignItems: 'center', justifyContent: 'center' }}
+        start={[2, 5, 10]}
+        end={[5, 9, 13]}
+        sx={{ alignItems: 'center', justifyContent: 'right' }}
       >
-        {/* <Button
-          data-testid="about"
-          sx={{ color: pathName === '/about' ? 'blue' : '' }}
-          onClick={() => router.push('/about')}
+        <Link
+          as="h6"
+          data-testid="portfolio"
+          href="#part2"
+          mr="m"
+          sx={{
+            borderBottom: pathName === '/portfolio' ? '1px solid white' : ''
+          }}
+          // onClick={() => router.push('#part2')}
         >
-          ABOUT
-        </Button>
-        <Button
-          data-testid="projects"
-          sx={{ color: pathName === '/projects' ? 'blue' : '' }}
-          onClick={() => router.push('/projects')}
-        >
-          PROJECTS
-        </Button> */}
-        <Button
-          data-testid="resume"
-          sx={{ color: pathName === '/resume' ? 'blue' : '' }}
-          onClick={() => router.push('/resume')}
-        >
-          RESUME
-        </Button>
-        <Button
+          PORTFOLIO
+        </Link>
+        <Link
+          as="h6"
           data-testid="contact"
-          sx={{ color: pathName === '/contact' ? 'blue' : '' }}
-          onClick={() => router.push('/contact')}
+          href="#part3"
+          sx={{
+            borderBottom: pathName === '/contact' ? '1px solid white' : ''
+          }}
         >
           CONTACT
-        </Button>
+        </Link>
       </Flex>
-      {/* <Flex
-        start={11}
-        end={12}
-        sx={{ width: '100%', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <SocialIcon url="https://github.com/sidney-wells" />{' '}
-      </Flex> */}
     </Grid>
   );
 };
 
 export default GlobalHeader;
+
+GlobalHeader.propTypes = {
+  router: PropTypes.object
+};
+
+GlobalHeader.defaultProps = {
+  router: {}
+};

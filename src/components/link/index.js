@@ -7,9 +7,9 @@ const Link = ({ href, size, children, ...props }) => {
     cursor: 'pointer',
     display: 'inline-block',
     textDecoration: 'none',
-    color: 'neon',
+    color: 'white',
     '&:hover': {
-      color: 'purple'
+      borderBottom: '1px solid white'
     }
   };
   const linkSize =
