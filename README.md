@@ -1,11 +1,3 @@
-"Roboto", "Helvetica", "Arial", sans-serif
-
-## Getting Started
-
-## Learn More
-
-## Deploy on Vercel
-
-## Portfolio Stuff
+## Portfolio Stuff - in progress - https://personal-website-sidney-wells.vercel.app/
 
 
