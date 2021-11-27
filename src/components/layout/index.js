@@ -3,44 +3,56 @@
 import { jsx } from 'theme-ui';
 import PropTypes from 'prop-types';
 import { GlobalHeader, Box, Footer } from '..';
+import { useState } from 'react';
 
-const Layout = ({ router, variant, children, ...props }) => (
-  <div
-    sx={{
-      m: '0px',
-      p: '0px',
-      scrollBehavior: 'smooth'
-    }}
-  >
-    <header
+const Layout = ({ router, variant, children, ...props }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
       sx={{
-        variant: 'layout.header'
+        m: '0px',
+        p: '0px',
+        scrollBehavior: 'smooth'
+        // background: isOpen && 'rgba(0, 0, 0, .7)'
       }}
     >
-      <GlobalHeader router={router} />
-    </header>
-    <main
-      sx={{
-        width: '100%',
-        flex: '1 1 auto',
-        variant: 'layout.main',
-        display: 'table'
-      }}
-    >
-      <Box
+      <header
         sx={{
-          mx: 'auto',
-          variant: `layout.main.${variant}`,
-          display: 'table-cell'
+          variant: 'layout.header'
+          // opacity: isOpen ? '.2' : 1,
+          // background: isOpen && 'rgb(0, 0, 0, .2)'
         }}
-        {...props}
       >
-        {children}
-      </Box>
-    </main>
-    <Footer />
-  </div>
-);
+        <GlobalHeader isOpen={isOpen} setIsOpen={setIsOpen} router={router} />
+      </header>
+      <main
+        sx={{
+          width: '100%',
+          flex: '1 1 auto',
+          variant: 'layout.main',
+          display: 'table'
+          // background: isOpen ? 'rgba(0, 0, 0, .2)' : 'white'
+        }}
+      >
+        <Box
+          sx={{
+            mx: 'auto',
+            variant: `layout.main.${variant}`,
+            display: 'table-cell',
+            // background: isOpen ? 'rgba(0, 0, 0, .2)' : 'white'
+            opacity: isOpen ? '.2' : 1,
+            zIndex: -2
+          }}
+          {...props}
+        >
+          {children}
+        </Box>
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 Layout.propTypes = {
   router: PropTypes.object,

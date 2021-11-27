@@ -8,10 +8,10 @@ describe('Project', () => {
   let pathname;
 
   it('should render the project page', () => {
-    pathname = '/projects';
-    useRouter.mockImplementation(() => ({
-      pathname
-    }));
+    // pathname = '/projects';
+    // useRouter.mockImplementation(() => ({
+    //   pathname
+    // }));
     render(<Project />);
   });
 });

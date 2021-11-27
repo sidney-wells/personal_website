@@ -12,24 +12,23 @@ const Template = args => <Text {...args} />;
 export const Small = Template.bind({});
 Small.args = {
   size: 's',
-  children: 'This is a small text'
+  children: 'This is a 13px text'
 };
-Small.parameters = {
-  backgrounds: { default: 'dark' }
-};
+
 export const Medium = Template.bind({});
 Medium.args = {
   size: 'm',
-  children: 'This is a medium text'
+  children: 'This is a 16px text'
 };
-Medium.parameters = {
-  backgrounds: { default: 'dark' }
-};
+
 export const Large = Template.bind({});
 Large.args = {
   size: 'l',
-  children: 'This is a medium text'
+  children: 'This is a 20px text'
 };
-Large.parameters = {
-  backgrounds: { default: 'dark' }
+
+export const extraLarge = Template.bind({});
+extraLarge.args = {
+  size: 'xl',
+  children: 'This is a 24px text'
 };

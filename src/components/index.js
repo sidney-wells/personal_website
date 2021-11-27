@@ -10,6 +10,7 @@ export { default as Infinity } from './infinity';
 export { default as Image } from './image';
 export { default as Layout } from './layout';
 export { default as Link } from './link';
+export { default as MenuButton } from './menuButton';
 export { default as ProjectCard } from './project-card';
 export { default as ProjectCardList } from './project-card-list';
 export { default as Section } from './section';

@@ -15,9 +15,6 @@ SmallLink.args = {
   size: 's',
   children: 'This is a small link'
 };
-SmallLink.parameters = {
-  backgrounds: { default: 'dark' }
-};
 
 export const MediumLink = Template.bind({});
 MediumLink.args = {
@@ -25,16 +22,10 @@ MediumLink.args = {
   size: 'm',
   children: 'This is a medium link'
 };
-MediumLink.parameters = {
-  backgrounds: { default: 'dark' }
-};
 
 export const LargeLink = Template.bind({});
 LargeLink.args = {
   href: '/',
   size: 'l',
   children: 'This is a large link'
-};
-LargeLink.parameters = {
-  backgrounds: { default: 'dark' }
 };

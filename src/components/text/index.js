@@ -6,7 +6,7 @@ const Text = ({ size, ...props }) => (
 );
 
 Text.propTypes = {
-  size: PropTypes.oneOf(['s', 'm', 'l'])
+  size: PropTypes.oneOf(['s', 'm', 'l', 'xl'])
 };
 
 Text.defaultProps = {

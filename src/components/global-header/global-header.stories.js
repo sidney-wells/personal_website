@@ -9,4 +9,12 @@ export default story;
 
 const Template = args => <GlobalHeader {...args} />;
 
-export const Default = Template.bind({});
+export const OpenMenu = Template.bind({});
+OpenMenu.args = {
+  isOpen: true
+};
+
+export const ClosedMenu = Template.bind({});
+ClosedMenu.args = {
+  isOpen: false
+};

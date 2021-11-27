@@ -1,39 +1,58 @@
 const breakpoints = ['576px', '1023px'];
 
+const colors = {
+  background: 'white',
+  gray: 'rgba(37, 37, 37, .5)',
+  lightGray: '#C0C0C0',
+  darkGray: '	#616161',
+  charcoal: '#333333',
+  // don't really use these
+  purple: '#6930c3',
+  turq: '#64dfdf',
+  neon: '#80ffdb'
+};
+
 const buttons = {
   primary: {
     fontFamily: 'IBMPlex',
-    color: 'black',
+    color: 'charcoal',
     backgroundColor: 'transparent',
-    borderColor: '2px solid black',
+    border: `solid 2px ${colors.charcoal}`,
     fontSize: '20px',
     padding: '10px 20px',
     fontWeight: 'bold',
+    cursor: 'pointer',
     '&:hover': {
-      bg: 'blue'
+      bg: 'charcoal',
+      color: 'white',
+      border: '2px solid charcoal'
     }
   },
   secondary: {
-    color: 'black',
-    backgroundColor: 'white',
-    borderColor: '2px solid black',
+    fontFamily: 'IBMPlex',
+    color: 'white',
+    backgroundColor: 'charcoal',
+    border: `solid 2px white`,
+    fontSize: '20px',
+    padding: '10px 20px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
     '&:hover': {
-      bg: 'blue'
+      color: `${colors.charcoal}`,
+      bg: 'white',
+      border: `solid 2px ${colors.charcoal}`
     }
+  },
+  menu: {
+    color: 'charcoal',
+    width: '70px',
+    padding: '0px'
+  },
+  menuOpen: {
+    color: 'red',
+    width: '70px',
+    paddingRight: '0px'
   }
-};
-
-const colors = {
-  background: 'white',
-  purple: '#6930c3',
-  turq: '#64dfdf',
-  neon: '#80ffdb',
-  text: 'rgba(37, 37, 37, .5)',
-  black: 'black'
-};
-
-const headers = {
-  backgroundColor: 'red'
 };
 
 const fonts = {
@@ -45,7 +64,7 @@ const fonts = {
   IBMPlex: 'IBM Plex Sans Arabic, sans-serif'
 };
 
-const fontSizes = [12, 13, 16, 20, 24, 48, 56, 72];
+const fontSizes = [13, 16, 20, 24, 48, 56, 72];
 
 const fontWeights = {
   regular: 400,
@@ -88,34 +107,34 @@ const images = {
 const layout = {
   root: {},
   header: {
-    bg: '#0e172d', // previously gray #BEBEBE
-    overflow: 'hidden',
+    bg: colors.background, // previously gray #BEBEBE
+    // overflow: 'hidden',
     width: '100%' /* Full width */,
     position: 'fixed', // Set the navbar to fixed position
     top: 0, // Position the navbar at the top of the page
     mt: '-5px',
     p: '0px',
-    borderBottom: '1px solid #C0C0C0'
+    borderBottom: `1px solid ${colors.charcoal}`
   },
   main: {
-    border: '2px solid blue',
+    border: `2px solid ${colors.purple}`,
     primary: {
-      backgroundColor: '#0e172d' // previous white-ish #F5F5F5
+      backgroundColor: 'white' // previous white-ish #F5F5F5
     },
     secondary: {
-      backgroundColor: '#FFFFFF'
+      backgroundColor: 'white'
     }
   },
   container: {
     maxWidth: '1200px',
-    border: '2px solid red',
+    border: `2px solid ${colors.turq}`,
     primary: {
       minHeight: 'calc(100vh - 60px)'
     },
     margin: 'auto'
   },
   footer: {
-    backgroundColor: '#0e172d' // previously gray #BEBEBE
+    backgroundColor: `${colors.background}` // previously gray #BEBEBE
   }
 };
 
@@ -129,49 +148,29 @@ space.xl = space[5];
 const text = {
   heading: {
     h1: {
-      fontSize: [7],
+      fontSize: 6,
       fontFamily: fonts.IBMPlex,
       lineHeight: ['40px', '58px'],
       letterSpacing: ['-0.6', '-1px']
     },
     h2: {
-      fontSize: [6],
+      fontSize: 5,
       fontFamily: fonts.IBMPlex,
       lineHeight: ['40px', '48px'],
       letterSpacing: ['2px', '2px']
     },
     h3: {
-      fontSize: 5,
+      fontSize: 4,
       fontFamily: fonts.IBMPlex,
       lineHeight: '48px',
       letterSpacing: '3px'
-    },
-    h4: {
-      fontSize: 3,
-      fontFamily: fonts.IBMPlex,
-      lineHeight: '28px',
-      letterSpacing: '2px'
-    },
-    h5: {
-      fontSize: 2,
-      fontWeight: 'semiBold',
-      fontFamily: fonts.IBMPlex,
-      lineHeight: '24px',
-      letterSpacing: '2px'
-    },
-    h6: {
-      fontSize: 0,
-      fontWeight: 'regular',
-      fontFamily: fonts.IBMPlex,
-      lineHeight: '20px',
-      letterSpacing: '2px'
     }
   },
   paragraph: {
     s: {
       color: 'black',
       fontFamily: 'IBMPlex',
-      fontSize: 1,
+      fontSize: 0,
       fontWeight: 'regular',
       lineHeight: '26px',
       letterSpacing: 0
@@ -179,7 +178,7 @@ const text = {
     m: {
       color: 'black',
       fontFamily: 'IBMPlex',
-      fontSize: 3,
+      fontSize: 1,
       fontWeight: 'regular',
       lineHeight: '28px',
       letterSpacing: 0
@@ -187,9 +186,17 @@ const text = {
     l: {
       color: 'black',
       fontFamily: 'IBMPlex',
-      fontSize: 4,
+      fontSize: 2,
       fontWeight: 'medium',
-      lineHeight: '50px',
+      lineHeight: '30px',
+      letterSpacing: 0
+    },
+    xl: {
+      color: 'black',
+      fontFamily: 'IBMPlex',
+      fontSize: 3,
+      fontWeight: 'medium',
+      lineHeight: '32px',
       letterSpacing: 0
     }
   }
@@ -211,7 +218,6 @@ const theme = {
   breakpoints,
   buttons,
   colors,
-  headers,
   fonts,
   fontSizes,
   fontWeights,
