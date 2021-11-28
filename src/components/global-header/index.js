@@ -12,7 +12,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
 
   return (
     <Box>
-      {width > 1265 ? (
+      {width > 1065 ? (
         <Grid
           px="s"
           sx={{
@@ -21,7 +21,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
         >
           <Flex start={[0]} end={[2]} sx={{ alignItems: 'center' }}>
             <Link
-              as="h6"
+              size="m"
               data-testid="contact"
               href="#part1"
               sx={{
@@ -37,7 +37,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
             sx={{ alignItems: 'center', justifyContent: 'right' }}
           >
             <Link
-              as="h6"
+              size="m"
               data-testid="about"
               href="#part2"
               mr="m"
@@ -49,7 +49,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
               ABOUT
             </Link>
             <Link
-              as="h6"
+              size="m"
               data-testid="portfolio"
               href="#part2"
               mr="m"
@@ -61,7 +61,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
               PORTFOLIO
             </Link>
             <Link
-              as="h6"
+              size="m"
               data-testid="contact"
               href="#part3"
               sx={{
@@ -81,7 +81,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
         >
           <Flex start={[0]} end={[2]} sx={{ alignItems: 'center' }}>
             <Link
-              as="h6"
+              size="m"
               data-testid="contact"
               href="#part1"
               sx={{

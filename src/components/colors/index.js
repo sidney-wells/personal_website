@@ -9,7 +9,7 @@ const Color = ({ as, color, ...props }) => {
 };
 
 Color.propTypes = {
-  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  as: PropTypes.oneOf(['h1', 'h2', 'h3']),
   color: PropTypes.string
 };
 

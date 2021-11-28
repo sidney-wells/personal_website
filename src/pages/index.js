@@ -20,13 +20,13 @@ const Index = () => {
             {/* Name */}
             Lorem Ipsum is simply
           </Heading>
-          <Heading as="h4" pt="s" sx={{ color: 'white' }}>
+          <Heading as="h3" pt="s" sx={{ color: 'white' }}>
             {/* I am a software developer */}
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since{' '}
           </Heading>
-          <Heading as="h4" pt="s">
+          <Heading as="h3" pt="s">
             {/* I look forward to connecting with you. */}
             Lorem Ipsum Lorem Ipsum Lorem Ipsum
           </Heading>
@@ -46,7 +46,7 @@ const Index = () => {
         />
         <SocialIcon
           url="https://www.facebook.com/sidneywells101"
-          style={{ margin: '10px' }}
+          style={{ margirffn: '10px' }}
         />
       </Box> */}
       </Section>

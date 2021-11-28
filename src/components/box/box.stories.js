@@ -9,7 +9,7 @@ export default story;
 
 const Template = args => (
   <div>
-    <Box bg="Teal" {...args}>
+    <Box bg="teal" {...args}>
       CONTENT
     </Box>
   </div>
