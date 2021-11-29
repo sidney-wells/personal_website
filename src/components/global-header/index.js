@@ -5,14 +5,22 @@ import { Flex, Grid, Link, MenuButton, Box } from '..';
 // import { SocialIcon } from 'react-social-icons';
 import PropTypes from 'prop-types';
 import { useWindowWidth } from '@react-hook/window-size';
+import { useEffect, useState } from 'react';
 
 const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
   const pathName = router.pathname;
   const width = useWindowWidth();
+  const [pageWidth, setPageWidth] = useState(1300);
+
+  useEffect(() => {
+    setPageWidth(width);
+  });
+
+  console.log('width', width);
 
   return (
     <Box>
-      {width > 1065 ? (
+      {pageWidth > 1065 ? (
         <Grid
           px="s"
           sx={{
@@ -39,34 +47,35 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
             <Link
               size="m"
               data-testid="about"
-              href="#part2"
+              // href="#part2"
               mr="m"
               sx={{
                 borderBottom: pathName === '/about' ? '1px solid white' : ''
               }}
-              // onClick={() => router.push('#part2')}
+              onClick={() => router.push('#part2')}
             >
               ABOUT
             </Link>
             <Link
               size="m"
               data-testid="portfolio"
-              href="#part2"
+              // href="#part2"
               mr="m"
               sx={{
                 borderBottom: pathName === '/portfolio' ? '1px solid white' : ''
               }}
-              // onClick={() => router.push('#part2')}
+              onClick={() => router.push('#part2')}
             >
               PORTFOLIO
             </Link>
             <Link
               size="m"
               data-testid="contact"
-              href="#part3"
+              // href="#part3"
               sx={{
                 borderBottom: pathName === '/contact' ? '1px solid white' : ''
               }}
+              onClick={() => router.push('#part2')}
             >
               CONTACT
             </Link>
@@ -74,7 +83,7 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
         </Grid>
       ) : (
         <Grid
-          pl="xs"
+          px="xs"
           sx={{
             height: '60px'
           }}
@@ -83,24 +92,21 @@ const GlobalHeader = ({ router, isOpen, setIsOpen }) => {
             <Link
               size="m"
               data-testid="contact"
-              href="#part1"
+              // href="#part1"
               sx={{
                 borderBottom: pathName === '/contact' ? '1px solid white' : ''
               }}
+              onClick={() => router.push('#part2')}
             >
               SYMBOL
             </Link>
           </Flex>
           <Flex
-            start={[4, 9, 12]}
+            start={[5, 10, 13]}
             end={[5, 10, 13]}
             sx={{ alignItems: 'center' }}
           >
-            <MenuButton
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
-              onClick={() => console.log('click')}
-            />
+            <MenuButton router={router} isOpen={isOpen} setIsOpen={setIsOpen} />
           </Flex>
         </Grid>
       )}

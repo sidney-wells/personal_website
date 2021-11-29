@@ -2,7 +2,7 @@ import { Twirl as Hamburger } from 'hamburger-react';
 import PropTypes from 'prop-types';
 import { Flex, Heading, Box, Text, Button } from '..';
 
-const MenuButtons = ({ isOpen = false, setIsOpen = () => !isOpen }) => {
+const MenuButtons = ({ router, isOpen = false, setIsOpen = () => !isOpen }) => {
   const pathName = '';
 
   return (
@@ -13,7 +13,7 @@ const MenuButtons = ({ isOpen = false, setIsOpen = () => !isOpen }) => {
       <Flex
         sx={{
           zIndex: -1,
-          //   border: 'solid 1px black',
+          // border: 'solid 1px black',
           position: 'absolute',
           top: '0px',
           right: '0px',
@@ -39,7 +39,7 @@ const MenuButtons = ({ isOpen = false, setIsOpen = () => !isOpen }) => {
                 border: 'none',
                 width: '100%'
               }}
-              // onClick={() => router.push('#part2')}
+              onClick={() => router.push('#part2')}
             >
               ABOUT
             </Button>
@@ -85,7 +85,8 @@ const MenuButtons = ({ isOpen = false, setIsOpen = () => !isOpen }) => {
 
 MenuButtons.propTypes = {
   isOpen: PropTypes.bool,
-  setIsOpen: PropTypes.func
+  setIsOpen: PropTypes.func,
+  router: PropTypes.func
 };
 
 export default MenuButtons;

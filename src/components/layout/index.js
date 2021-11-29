@@ -9,7 +9,8 @@ const Layout = ({ router, variant, children, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
+    <Box
+      onClick={() => (!isOpen ? {} : setIsOpen(false))}
       sx={{
         m: '0px',
         p: '0px',
@@ -41,7 +42,7 @@ const Layout = ({ router, variant, children, ...props }) => {
             variant: `layout.main.${variant}`,
             display: 'table-cell',
             // background: isOpen ? 'rgba(0, 0, 0, .2)' : 'white'
-            opacity: isOpen ? '.2' : 1,
+            // opacity: isOpen ? '.2' : 1,
             zIndex: -2
           }}
           {...props}
@@ -50,7 +51,7 @@ const Layout = ({ router, variant, children, ...props }) => {
         </Box>
       </main>
       <Footer />
-    </div>
+    </Box>
   );
 };
 
